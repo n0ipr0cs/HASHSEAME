@@ -5,6 +5,12 @@ import getpass
 import hashlib
 import sys
 
+print ""
+print "	/ )( \ / _\ / ___)/ )( \/ ___)(  __) / _\ ( \/ )(  __)"
+print "	) __ (/    \\___ \) __ (\___ \ ) _) /    \/ \/ \ ) _)" 
+print "	\_)(_/\_/\_/(____/\_)(_/(____/(____)\_/\_/\_)(_/(____)"
+print "***********************by n0ipr0cs***************************"
+
 #creacion de las funciones de los hash
 def MD5_HASH():
 	passwd = getpass.getpass()
@@ -16,19 +22,9 @@ def SHA1_HASH():
 	HASH_MD5 = hashlib.sha1(passwd).hexdigest()
 	print HASH_MD5
 	return
-def SHA224_HASH():
-	passwd = getpass.getpass()
-	HASH_MD5 = hashlib.sha224(passwd).hexdigest()
-	print HASH_MD5
-	return
 def SHA256_HASH():
 	passwd = getpass.getpass()
 	HASH_MD5 = hashlib.sha256(passwd).hexdigest()
-	print HASH_MD5
-	return
-def SHA384_HASH():
-	passwd = getpass.getpass()
-	HASH_MD5 = hashlib.sha384(passwd).hexdigest()
 	print HASH_MD5
 	return
 def SHA512_HASH():
@@ -37,19 +33,13 @@ def SHA512_HASH():
 	print HASH_MD5
 	return
 
-print "************************************"
-print "H A S H S E A M E   by n0ipr0cs"
-print "************************************"
 
 
 
-
-print " 1. md5"
+print " 1 .md5"
 print " 2 .sha1"
-print " 3 .sha224"
-print " 4 .sha256"
-print " 5 .sha384"
-print " 6 .sha512"
+print " 3 .sha256"
+print " 4 .sha512"
 
 VAR_1 = raw_input("Elige un algoritmo para tu password")
 
@@ -58,12 +48,8 @@ if VAR_1 == "1":
 elif VAR_1 == "2":
 	SHA1_HASH()
 elif VAR_1 == "3":
-	SHA224_HASH()
-elif VAR_1 == "4":
 	SHA256_HASH()
-elif VAR_1 == "5":
-	SHA384_HASH()
-elif VAR_1 == "6":
+elif VAR_1 == "4":
 	SHA512_HASH()
 else:
 	print "ERROR!!!  Elige una opcion valida"
